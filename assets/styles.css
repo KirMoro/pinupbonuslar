@@ -213,6 +213,11 @@ input:focus-visible {
   overflow: hidden;
 }
 
+.media-frame picture,
+.hero-card picture {
+  display: block;
+}
+
 .section {
   padding: 42px 0;
 }
