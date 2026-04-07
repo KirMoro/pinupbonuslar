@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "sync:root": "rsync -a dist/ ./",
+    "build:root": "npm run build && npm run sync:root",
     "preview": "astro preview",
     "check": "astro check"
   },
