@@ -1,0 +1,349 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FaqList from "../components/FaqList.astro";
+import LinkCluster from "../components/LinkCluster.astro";
+import PromoImage from "../components/PromoImage.astro";
+import { guideCards, trustCards, site } from "../data/site";
+
+const faq = [
+  {
+    question: "Pin Up Casino Azərbaycanda nə üçün axtarılır?",
+    answer:
+      "İstifadəçilər əsasən rəsmi giriş, qeydiyyat, welcome bonus, mobil tətbiq və AZN ilə ödəniş mövzularını axtarırlar. Bu sayt həmin intentləri ayrı bələdçilərə bölür."
+  },
+  {
+    question: "Pin Up bonusunu almaq üçün nə etmək lazımdır?",
+    answer:
+      "Əvvəlcə hesab yaradın, sonra ilk depoziti yatırın. 10.000 AZN + 250 FS paketi və wager şərtləri yalnız rəsmi platformada təsdiqlənməlidir."
+  },
+  {
+    question: "Pin Up giriş və qeydiyyat üçün ən təhlükəsiz yol hansıdır?",
+    answer:
+      "Yalnız rəsmi domenə və ya etibarlı yönləndirmə linkinə keçin, sonra domeni və bonus şərtlərini vizual olaraq yenidən yoxlayın. Saxta mirror domenlərdən uzaq durun."
+  },
+  {
+    question: "Pin Up payment üsullarında AZN dəstəyi varmı?",
+    answer:
+      "Bəli, saytda AZN hesabı, bank kartları, e-cüzdanlar və kripto ödənişləri ilə bağlı məlumat verilir. Konkret limit və müddətlər əməliyyat anında dəyişə bilər."
+  },
+  {
+    question: "Bu sayt rəsmi operator səhifəsidir?",
+    answer:
+      "Xeyr. Pinupbonuslar.com affiliate məlumat layihəsidir və rəsmi operatorun hüquqi sənədlərini, hesab girişini və ödəniş mühitini əvəz etmir."
+  }
+];
+---
+
+<BaseLayout
+  title="Pin Up Casino Azərbaycan — Rəsmi Giriş, Bonus və AZN Bələdçisi"
+  description="Pin Up Casino Azərbaycan üçün yenilənmiş affiliate bələdçi: giriş, qeydiyyat, bonus, yükləmə və ödəniş yolları bir strukturda."
+  path="/"
+  image={site.defaultImage}
+  pageType="CollectionPage"
+  faq={faq}
+>
+  <section class="hero container">
+    <div>
+      <div class="meta-row">
+        <span class="meta-chip">Affiliate bələdçi</span>
+        <span class="meta-chip warm">Yenilənib: 7 aprel 2026</span>
+        <span class="meta-chip">18+ auditoriya</span>
+      </div>
+      <h1>Pin Up Casino Azərbaycan üçün strukturlaşdırılmış bonus, giriş və ödəniş bələdçisi</h1>
+      <p class="lead">
+        Pin Up Casino haqqında ən çox axtarılan mövzular eynidir: rəsmi giriş linki, yeni hesab
+        açmaq, 10.000 AZN + 250 FS bonus paketi, mobil tətbiqi təhlükəsiz yükləmək və AZN ilə
+        depozit-çıxarış etmək. Bu ana səhifə həmin intentləri ayrıca bələdçilərə ayırır ki,
+        istifadəçi lazımsız addımlarda itib-batmasın.
+      </p>
+      <p>
+        Sayt rəsmi operator deyil. Məqsədimiz saxta giriş linklərindən, köhnə promo mətndən və
+        qeyri-rəsmi APK mənbələrindən uzaq saxlayaraq istifadəçini düzgün qərar nöqtəsinə yönəltməkdir.
+      </p>
+      <div class="cta-group">
+        <a class="btn" href={site.affiliateUrl} rel="sponsored nofollow">
+          Bonus al
+        </a>
+        <a class="btn secondary" href="/pin-up-giris/">
+          Giriş bələdçisi
+        </a>
+      </div>
+    </div>
+    <div class="hero-aside reveal">
+      <div class="media-frame">
+        <PromoImage
+          variant="hero"
+          alt="Pin Up Casino Azərbaycanda bonus və giriş bələdçisi"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="surface alt">
+        <h2>Sürətli orientir</h2>
+        <ul class="pill-list">
+          <li>Rəsmi giriş və qeydiyyat yolları</li>
+          <li>Welcome bonus şərtləri üçün ayrıca səhifə</li>
+          <li>Android və iOS yükləmə bələdçisi</li>
+          <li>AZN ödənişlər və withdrawal ipucları</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="answer-card">
+      <h2>Pin Up Casino qısa cavab</h2>
+      <p>
+        <strong>
+          Pin Up Azərbaycanda bonus, giriş, qeydiyyat, mobil tətbiq və AZN ödənişləri bir yerdə
+          axtarılan beynəlxalq kazino brendidir.
+        </strong>
+      </p>
+      <p>
+        Ən doğru yanaşma bircə “ana səhifə”yə güvənmək deyil, hər intent üçün ayrıca bələdçidən
+        keçməkdir: login, qeydiyyat, bonus, download və payment mövzuları fərqli risklər daşıyır.
+      </p>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="section-header">
+      <h2>Bu hub nəyi yaxşılaşdırır?</h2>
+      <p class="lead">
+        Affiliate saytda ən böyük problem odur ki, bütün niyyətlər eyni mətndə qarışır. Burada
+        onları ayrı qərar səhifələrinə ayırdıq.
+      </p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Search intent parçalanır</h3>
+        <p>
+          “Pin Up giriş”, “Pin Up bonus” və “Pin Up yüklə” kimi sorğular fərqli cavab tələb edir.
+          Hər URL yalnız öz niyyətinə fokuslanır, bu da həm SEO, həm conversion üçün təmiz siqnal yaradır.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Azərbaycan bazarı üçün lokallaşdırılıb</h3>
+        <p>
+          AZN, yerli istifadə nümunələri, mobil davranış və Azərbaycan dilində copy tonu ayrıca nəzərə
+          alınıb. Bu, generic casino landing-lərdən daha istifadəçiyə yaxın struktur verir.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Trust siqnalları gizlədilmir</h3>
+        <p>
+          Affiliate disclosure, məsuliyyətli oyun, hüquqi sərhəd və operatorla sayt arasındakı fərq
+          açıq şəkildə göstərilir. Qısa yol axtaran istifadəçi məhz bu şəffaflığı görməlidir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="section-header">
+      <h2>Rəqəmlərlə qərar nöqtələri</h2>
+      <p class="lead">
+        İstifadəçi adətən beş şeyə baxır: bonus, minimum giriş həddi, ödəniş sürəti, oyun seçimi və mobil rahatlıq.
+      </p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <strong>10.000 AZN + 250 FS</strong>
+        <span>Welcome bonus ilə başlayan əsas acquisition təklifi</span>
+      </div>
+      <div class="stat">
+        <strong>Min. 9 AZN</strong>
+        <span>Depozit həddi aşağı saxlanıldığı üçün giriş baryeri kiçikdir</span>
+      </div>
+      <div class="stat">
+        <strong>7000+</strong>
+        <span>Slot, live casino, crash oyun və idman mərc məzmunu</span>
+      </div>
+      <div class="stat">
+        <strong>24/7</strong>
+        <span>Operator dəstəyi və mobil cihazdan davamlı giriş ehtiyacı</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="split-grid">
+      <div class="surface glow">
+        <h2>Kimə hansı səhifə lazımdır?</h2>
+        <ul class="key-list">
+          <li><strong>Giriş problemi var:</strong> əvvəl login bələdçisinə keçin və domeni yoxlayın.</li>
+          <li><strong>Yeni istifadəçisiniz:</strong> əvvəl qeydiyyat, sonra bonus və payment səhifələrini oxuyun.</li>
+          <li><strong>Tətbiq axtarırsınız:</strong> yalnız yükləmə səhifəsindəki rəsmi mənbə qaydasına əməl edin.</li>
+          <li><strong>Withdrawal maraqlandırır:</strong> payment səhifəsində eyni üsul və KYC qeydlərinə baxın.</li>
+        </ul>
+      </div>
+      <div class="table-wrap">
+        <table aria-label="Pin Up sürətli baxış cədvəli">
+          <thead>
+            <tr>
+              <th>Sorğu tipi</th>
+              <th>Düzgün səhifə</th>
+              <th>Niyə ayrıca lazımdır</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pin Up giriş</td>
+              <td>/pin-up-giris/</td>
+              <td>Phishing, şifrə bərpası və mobil login eyni anda izah olunur</td>
+            </tr>
+            <tr>
+              <td>Pin Up qeydiyyat</td>
+              <td>/pin-up-qeydiyyat/</td>
+              <td>AZN seçimi, qeydiyyat üsulu və ilk depozit addımları ayrılır</td>
+            </tr>
+            <tr>
+              <td>Pin Up bonus</td>
+              <td>/pin-up-bonus/</td>
+              <td>Bonus növləri, promo kampaniyalar və dəyişən şərtlər fokusda qalır</td>
+            </tr>
+            <tr>
+              <td>Pin Up yüklə</td>
+              <td>/pin-up-download/</td>
+              <td>APK riskləri və platforma fərqləri ayrıca qərar tələb edir</td>
+            </tr>
+            <tr>
+              <td>Pin Up ödəniş</td>
+              <td>/pin-up-payment/</td>
+              <td>Depozit, KYC və payout gecikmə riskləri fərqli intentdir</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="section-header">
+      <h2>Bonusdan withdrawal-a qədər tipik istifadəçi axını</h2>
+      <p class="lead">
+        Ən yaxşı affiliate content istifadəçini tək CTA ilə yox, doğru ardıcıllıqla yönəldir.
+      </p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-step">1</span>
+        <h3>Rəsmi giriş və ya qeydiyyat linkini seçin</h3>
+        <p>
+          İstifadəçi əvvəlcə mövcud hesabı ilə daxil olur və ya yeni profil açır. Burada saxta domen riski
+          ən yüksək olduğu üçün login/register content ən kritik trust qatıdır.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">2</span>
+        <h3>Welcome bonus paketini yoxlayın</h3>
+        <p>
+          Bonus məbləği cəlbedici görünür, amma wager və aktivlik müddəti operator tərəfində dəyişə bildiyi
+          üçün bonus səhifəsi həmişə şərtləri yenidən təsdiqləməyə çağırır.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">3</span>
+        <h3>AZN ilə depozit edin və cihazı seçin</h3>
+        <p>
+          Bəzi istifadəçilər mobil brauzerdə qalır, bəziləri tətbiq yükləyir. Yükləmə və ödəniş məzmunu
+          conversion-un texniki tərəfini bağlayır.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">4</span>
+        <h3>Withdrawal və təhlükəsizlik qaydalarını əvvəlcədən bilin</h3>
+        <p>
+          KYC, eyni üsul qaydası və bonus turnover məhdudiyyətləri əvvəlcədən izah olunduqda,
+          sonradan yaranan etimad problemi azalır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="split-grid">
+      <div>
+        <div class="section-header">
+          <h2>Platformada istifadəçini nə gözləyir?</h2>
+          <p class="lead">
+            Kazino traffic üçün yalnız “oyun çoxdur” demək kifayət etmir; formatı və gözləntini də aydın göstərmək lazımdır.
+          </p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>Slot və live casino</h3>
+            <p>
+              Pragmatic Play, Evolution, NetEnt və digər tanınmış provayderlərdən slot, rulet, blackjack və live show formatları.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Aviator və crash oyunlar</h3>
+            <p>
+              Qısa sessiya və yüksək temp sevən istifadəçilər üçün crash kateqoriyası ayrıca conversion yaradır.
+            </p>
+          </div>
+          <div class="card">
+            <h3>İdman və e-sport mərci</h3>
+            <p>
+              Futbol, tennis, basketbol və CS2, Dota 2 kimi e-sport növləri casino traffic-i sportsbook intentinə bağlayır.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="editorial-note">
+        <strong>Redaksiya qeydi</strong>
+        <p>
+          Biz operator adından “ən yaxşı kazino” hökmü vermirik. Məqsəd istifadəçiyə bonus, giriş, yükləmə və
+          payment mövzularında struktur verməkdir ki, qərarını rəsmi platformada daha məlumatlı şəkildə versin.
+        </p>
+        <p>
+          Bu yanaşma həm AEO üçün qısa cavablar yaradır, həm də thin affiliate problemindən uzaq saxlayır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="callout">
+      <div>
+        <h3>Əvvəl bonusu yoxla, sonra qeydiyyatdan keç</h3>
+        <p>
+          Welcome paketini, minimum depoziti və withdrawal şərtlərini əvvəlcədən görmək conversion sonrası məyusluğu azaldır.
+        </p>
+      </div>
+      <div class="cta-group">
+        <a class="btn" href="/pin-up-bonus/">
+          Bonus şərtləri
+        </a>
+        <a class="btn secondary" href="/pin-up-qeydiyyat/">
+          Qeydiyyata başla
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="media-frame">
+      <PromoImage variant="strip" alt="Pin Up bonus banneri" />
+    </div>
+  </section>
+
+  <FaqList
+    title="Pin Up Casino haqqında tez-tez verilən suallar"
+    description="Ən çox axtarılan əsas niyyətlərə qısa cavablar."
+    items={faq}
+  />
+
+  <LinkCluster
+    title="Əsas bələdçilər"
+    description="Commercial intent daşıyan bütün əsas səhifələr bir-birinə daxili link ilə bağlanıb."
+    links={guideCards}
+  />
+
+  <LinkCluster
+    title="Trust və şəffaflıq səhifələri"
+    description="Affiliate modelin necə işlədiyini və bu saytın sərhədlərini anlamaq üçün."
+    links={trustCards}
+  />
+</BaseLayout>

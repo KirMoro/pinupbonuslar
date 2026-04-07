@@ -1,2 +1,6 @@
 .DS_Store
 assets/source-banners/
+node_modules/
+dist/
+.astro/
+.codex-lighthouse*/

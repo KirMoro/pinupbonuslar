@@ -1,0 +1,47 @@
+---
+import { guideCards, trustCards } from "../data/site";
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Pin Up Casino</h4>
+      <p>
+        Azərbaycan auditoriyası üçün hazırlanmış affiliate məlumat layihəsi:
+        bonuslar, giriş, qeydiyyat, yükləmə və ödənişlər bir yerdə.
+      </p>
+    </div>
+    <div>
+      <h4>Bələdçilər</h4>
+      {
+        guideCards.map((link) => (
+          <p>
+            <a href={link.href}>{link.title}</a>
+          </p>
+        ))
+      }
+    </div>
+    <div>
+      <h4>Məlumat</h4>
+      <p>Lisenziya istinadı: Curacao 8048/JAZ</p>
+      <p>Operator qeydi: Carletta N.V.</p>
+      <p>Dəstək: 24/7 canlı çat və rəsmi operator kanalları</p>
+    </div>
+    <div>
+      <h4>Etibar</h4>
+      {
+        trustCards.map((link) => (
+          <p>
+            <a href={link.href}>{link.title}</a>
+          </p>
+        ))
+      }
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>
+      18+ | Sayt məlumat xarakterlidir, rəsmi operatorun hüquqi sənədlərini əvəz etmir.
+      Bonus və limitləri son olaraq rəsmi platformada yoxlayın. Məsuliyyətli oynayın.
+    </p>
+  </div>
+</footer>

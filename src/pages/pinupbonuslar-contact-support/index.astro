@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import LinkCluster from "../../components/LinkCluster.astro";
+import { trustCards } from "../../data/site";
+---
+
+<BaseLayout
+  title="Pinupbonuslar Əlaqə və Support Yönləndirməsi"
+  description="Rəsmi operator dəstəyi ilə sayt məzmun düzəlişlərini ayırmaq üçün əlaqə və support istiqamətləndirmə səhifəsi."
+  path="/pinupbonuslar-contact-support/"
+  pageType="ContactPage"
+  image="/assets/banner-share.jpg"
+  breadcrumb={[
+    { name: "Əsas", href: "/" },
+    { name: "Əlaqə", href: "/pinupbonuslar-contact-support/" }
+  ]}
+  headerCta={{
+    label: "Əsas səhifə",
+    href: "/",
+    variant: "secondary"
+  }}
+>
+  <section class="hero container">
+    <div>
+      <div class="meta-row">
+        <span class="meta-chip">Contact page</span>
+        <span class="meta-chip">Support routing</span>
+        <span class="meta-chip warm">Yenilənib: 7 aprel 2026</span>
+      </div>
+      <h1>Əlaqə və support sorğularını düzgün kanala yönləndirin</h1>
+      <p class="lead">
+        Pinupbonuslar.com rəsmi operator support komandası deyil. Bu səbəbdən login, KYC, payout və bonus statusu
+        kimi sorğular operatora, məzmun xətaları və hüquqi düzəlişlər isə bu layihənin özünə aid edilir.
+      </p>
+      <p>
+        Yanlış kanal seçildikdə cavab gecikir, bəzən isə ümumiyyətlə alınmır. Ona görə bu səhifənin işi form təqdim etmək yox,
+        sorğunu əvvəlcədən düzgün kateqoriyaya ayırmaqdır.
+      </p>
+    </div>
+    <div class="hero-aside reveal">
+      <div class="surface glow">
+        <h2>Düzgün yönləndirmə prinsipi</h2>
+        <p>
+          Operator problemləri operatora, redaksiya problemləri isə bu saytın öz support və issue axınına göndərilməlidir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="cards">
+      <div class="card">
+        <h3>Rəsmi operator dəstəyi</h3>
+        <p>
+          Hesab girişi, bloklanma, sənəd yoxlanışı, withdrawal gecikməsi, bonus eligibility və tətbiq hesabı ilə bağlı bütün sorğular operator tərəfində həll olunur.
+        </p>
+        <p>
+          <a class="btn" href="https://onlinepnplnk.com/lHgcD4Xg/?subId2=az_brand" rel="sponsored nofollow">
+            Rəsmi platformaya keç
+          </a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Sayt məzmun düzəlişi</h3>
+        <p>
+          Köhnə bonus rəqəmi, broken link, typo, yanlış limit və ya schema problemi gördünüzsə, bu artıq redaksiya məsələsidir.
+        </p>
+        <p>
+          <a
+            class="btn secondary"
+            href="https://github.com/KirMoro/pinupbonuslar/issues"
+            target="_blank"
+            rel="nofollow noopener"
+          >
+            GitHub Issues
+          </a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Hüquqi və uyğunluq qeydləri</h3>
+        <p>
+          Əgər sorğu hüquqi xarakter daşıyırsa, URL, məsələ izahı, tələb olunan düzəliş və mümkün təsdiqləyici mənbəni birlikdə göndərmək lazımdır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="split-grid">
+      <div class="surface glow">
+        <h2>Sorğu göndərərkən nə əlavə edin?</h2>
+        <ul class="key-list">
+          <li>Dəqiq URL və ya ekran görüntüsü.</li>
+          <li>Problem tipi: broken link, köhnə şərt, typo, hüquqi qeyd və s.</li>
+          <li>Mümkünsə rəsmi istinad və ya doğrulama mənbəsi.</li>
+          <li>Məsələnin operator hesabına aid olub-olmadığı barədə bir cümlə.</li>
+        </ul>
+      </div>
+      <div class="surface alt">
+        <h2>Nəyi etmirik?</h2>
+        <ul class="key-list">
+          <li>Parol bərpa etmirik.</li>
+          <li>KYC sənədi qəbul etmirik.</li>
+          <li>Depozit və withdrawal əməliyyatı aparmırıq.</li>
+          <li>Operator adından nəticə vəd etmirik.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="callout">
+      <div>
+        <h3>Sorğunun cavab keyfiyyəti giriş keyfiyyətindən asılıdır</h3>
+        <p>
+          URL və fakt göstərə bilməyən “saytda problem var” tipli mesajlar çox vaxt yenidən sorğu tələb edir. Aydın giriş daha sürətli düzəliş deməkdir.
+        </p>
+      </div>
+      <div class="cta-group">
+        <a
+          class="btn"
+          href="https://github.com/KirMoro/pinupbonuslar/issues"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          Issue aç
+        </a>
+        <a class="btn secondary" href="/pinupbonuslar-about/">
+          Layihə barədə
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <LinkCluster
+    title="Trust və disclosure bölmələri"
+    description="Support routing, privacy və hüquqi sərhədlər bir yerdə başa düşülsün deyə."
+    links={trustCards.filter((item) => item.href !== "/pinupbonuslar-contact-support/")}
+  />
+</BaseLayout>

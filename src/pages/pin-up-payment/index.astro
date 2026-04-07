@@ -1,0 +1,261 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FaqList from "../../components/FaqList.astro";
+import LinkCluster from "../../components/LinkCluster.astro";
+import PromoImage from "../../components/PromoImage.astro";
+import { site } from "../../data/site";
+
+const faq = [
+  {
+    question: "Pin Up depozit minimum nə qədərdir?",
+    answer:
+      "Əsas başlanğıc həddi 9 AZN kimi göstərilir, lakin konkret üsul və kampaniyaya görə operator tərəfində yenidən yoxlanmalıdır."
+  },
+  {
+    question: "Withdrawal nə qədər çəkə bilər?",
+    answer:
+      "Üsuldan, KYC statusundan və aktiv bonusdan asılı olaraq dəyişir. Kripto və e-cüzdanlar daha sürətli, bank kartları daha yavaş ola bilər."
+  },
+  {
+    question: "Eyni üsulla çıxarış qaydası nə deməkdir?",
+    answer:
+      "Depozit etdiyiniz üsul və ya ona yaxın verified üsul payout üçün tələb oluna bilər. Bu, təhlükəsizlik və AML/KYC siyasətinin bir hissəsidir."
+  },
+  {
+    question: "Bonus aktivdirsə, payout məhdudlaşa bilər?",
+    answer:
+      "Bəli. Bonus turnover və digər şərtlər tamamlanmayıbsa, withdrawal vaxtı və ya eligibility dəyişə bilər."
+  }
+];
+
+const related = [
+  {
+    title: "Pin Up bonus",
+    href: "/pin-up-bonus/",
+    description: "Payment şərtlərinə təsir edə bilən welcome və promo kampaniyaları."
+  },
+  {
+    title: "Pin Up giriş",
+    href: "/pin-up-giris/",
+    description: "Kassa bölməsinə keçmək üçün əvvəl hesabınıza doğru şəkildə daxil olun."
+  },
+  {
+    title: "Pin Up qeydiyyat",
+    href: "/pin-up-qeydiyyat/",
+    description: "Yeni hesab və düzgün valyuta seçimi payment axınının başlanğıcıdır."
+  }
+];
+---
+
+<BaseLayout
+  title="Pin Up Ödəniş — AZN Depozit, Withdrawal və Limit Bələdçisi"
+  description="Pin Up payment bələdçisi: AZN depozit, withdrawal, əsas limitlər, KYC və bonusun payout prosesinə təsiri."
+  path="/pin-up-payment/"
+  faq={faq}
+  image={site.defaultImage}
+  breadcrumb={[
+    { name: "Əsas", href: "/" },
+    { name: "Ödəniş", href: "/pin-up-payment/" }
+  ]}
+  headerCta={{
+    label: "Depozit et",
+    href: site.affiliateUrl,
+    rel: "sponsored nofollow"
+  }}
+>
+  <section class="hero container">
+    <div>
+      <div class="meta-row">
+        <span class="meta-chip">Payment intent</span>
+        <span class="meta-chip">AZN + KYC</span>
+        <span class="meta-chip warm">Yenilənib: 7 aprel 2026</span>
+      </div>
+      <h1>Pin Up payment: depozit, withdrawal və payout risklərini əvvəlcədən anlamaq</h1>
+      <p class="lead">
+        Ödəniş səhifəsi affiliate saytda ən kritik trust zonalardan biridir. İstifadəçi yalnız “Visa və kripto var”
+        cümləsini yox, həm də KYC, eyni üsul qaydası və bonusun payout-a təsirini bilmək istəyir.
+      </p>
+      <p>
+        Bu səbəbdən payment content burada sadəcə üsul siyahısı deyil. Məqsəd conversion öncəsi istifadəçinin
+        gözləntilərini kalibrləməkdir ki, ilk withdrawal zamanı sürpriz yaşanmasın.
+      </p>
+      <div class="cta-group">
+        <a class="btn" href={site.affiliateUrl} rel="sponsored nofollow">
+          Depozit et
+        </a>
+        <a class="btn secondary" href="/pin-up-bonus/">
+          Bonusla birlikdə bax
+        </a>
+      </div>
+    </div>
+    <div class="hero-aside reveal">
+      <div class="media-frame">
+        <PromoImage variant="hero" alt="Pin Up payment üçün hero banner" loading="eager" fetchpriority="high" />
+      </div>
+      <div class="surface alt">
+        <h2>Payment-də əsas yoxlama nöqtələri</h2>
+        <ul class="pill-list">
+          <li>Min. depozit və payout həddi</li>
+          <li>KYC statusu</li>
+          <li>Eyni üsul qaydası</li>
+          <li>Aktiv bonusun təsiri</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="answer-card">
+      <h2>Qısa cavab</h2>
+      <p>
+        <strong>
+          Pin Up payment axınında əsas məsələ üsul sayından çox, withdrawal qaydalarının və bonus təsirinin əvvəlcədən başa düşülməsidir.
+        </strong>
+      </p>
+      <p>
+        Depozit sürətli ola bilər, amma payout hər zaman eyni sürətlə getməyə bilər. Bu fərqi əvvəlcədən bilmək etibarı qoruyur.
+      </p>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="section-header">
+      <h2>Depozit və withdrawal üçün tipik axın</h2>
+      <p class="lead">Sadə görünür, amma hər addımda ayrıca uyğunluq yoxlaması var.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-step">1</span>
+        <h3>Hesaba daxil olun və kassa bölməsinə keçin</h3>
+        <p>
+          Ödəniş mövzusu login-dən ayrılmazdır. Düzgün hesab profilində, düzgün valyuta ilə olduğunuzu yoxlayın.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">2</span>
+        <h3>Üsul və məbləği seçin</h3>
+        <p>
+          Kart, e-cüzdan və ya kripto seçiminiz yalnız sürətə deyil, sonrakı payout qaydasına da təsir edə bilər.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">3</span>
+        <h3>Bonus və uyğunluq şərtlərini nəzərdən keçirin</h3>
+        <p>
+          Aktiv bonus, turnover və limitlər payment axınını dəyişə bilər. Depozit etməzdən əvvəl bu konteksti oxumaq vacibdir.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">4</span>
+        <h3>Withdrawal üçün KYC hazırlığını bilin</h3>
+        <p>
+          İlk payout zamanı şəxsiyyət təsdiqi və eyni üsul qaydası ortaya çıxa bilər. Bu, gecikmə deyil, çox vaxt compliance addımıdır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="table-wrap">
+      <table aria-label="Pin Up ödəniş üsulları və limitlər">
+        <thead>
+          <tr>
+            <th>Üsul</th>
+            <th>Tipik minimum</th>
+            <th>Payment məntiqi</th>
+            <th>Qeyd</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Visa / Mastercard</td>
+            <td>9 AZN</td>
+            <td>Geniş yayılıb, payout daha uzun çəkə bilər</td>
+            <td>Kart verification addımları lazım ola bilər</td>
+          </tr>
+          <tr>
+            <td>E-Manat / e-cüzdan</td>
+            <td>9 AZN</td>
+            <td>Daha çevik local payment davranışı</td>
+            <td>Availability operator tərəfində yoxlanmalıdır</td>
+          </tr>
+          <tr>
+            <td>Piastrix / Perfect Money</td>
+            <td>9 AZN</td>
+            <td>Aktiv istifadəçilər üçün rahat alternativ</td>
+            <td>Komissiya provider tərəfindən dəyişə bilər</td>
+          </tr>
+          <tr>
+            <td>Bitcoin / Ethereum / USDT</td>
+            <td>AZN ekvivalenti</td>
+            <td>Sürətli payout gözləntisi yarada bilər</td>
+            <td>Şəbəkə haqqı və wallet dəqiqliyi vacibdir</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">
+      Maksimum payout limiti və dəqiq müddətlər kampaniya, metod və hesab statusuna görə dəyişə bilər.
+    </p>
+  </section>
+
+  <section class="section container reveal">
+    <div class="split-grid">
+      <div class="surface glow">
+        <h2>Withdrawal gecikməsini ən çox nə yaradır?</h2>
+        <ul class="key-list">
+          <li>KYC sənədlərinin hələ tamamlanmaması.</li>
+          <li>Depozit və payout üsulunun uyğun gəlməməsi.</li>
+          <li>Aktiv bonus və turnover şərtlərinin açıq qalması.</li>
+          <li>Bank və ya provider tərəfində əlavə yoxlama.</li>
+        </ul>
+      </div>
+      <div class="surface alt">
+        <h2>Əvvəlcədən hazır olmaq üçün</h2>
+        <ul class="key-list">
+          <li>İlk payout-dan əvvəl profil məlumatlarını nizama salın.</li>
+          <li>Əsas istifadə etdiyiniz payment üsulunu yadda saxlayın.</li>
+          <li>Bonus aktivdirsə, payment planını ona görə qurun.</li>
+          <li>Böyük məbləğ üçün hər zaman əlavə vaxt ehtimalını nəzərə alın.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="callout">
+      <div>
+        <h3>Bonus və withdrawal eyni qərarın iki tərəfidir</h3>
+        <p>
+          Yüksək bonus headline-i payout qaydasından ayrı düşünüləndə yanlış gözlənti yaradır. Bu iki səhifəni birlikdə oxumaq daha doğrudur.
+        </p>
+      </div>
+      <div class="cta-group">
+        <a class="btn" href="/pin-up-bonus/">
+          Bonusu yoxla
+        </a>
+        <a class="btn secondary" href={site.affiliateUrl} rel="sponsored nofollow">
+          Rəsmi payment axını
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="media-frame">
+      <PromoImage variant="square" alt="Pin Up payment üçün kvadrat promo image" />
+    </div>
+  </section>
+
+  <FaqList
+    title="Pin Up ödəniş haqqında tez-tez verilən suallar"
+    description="Depozit, withdrawal, KYC və bonusun payout-a təsiri barədə əsas cavablar."
+    items={faq}
+  />
+
+  <LinkCluster
+    title="Payment ilə birlikdə oxunmalı səhifələr"
+    description="Ödəniş intent login, register və bonus səhifələri ilə birlikdə daha aydın başa düşülür."
+    links={related}
+  />
+</BaseLayout>

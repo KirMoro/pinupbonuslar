@@ -1,0 +1,129 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import LinkCluster from "../../components/LinkCluster.astro";
+import { trustCards } from "../../data/site";
+---
+
+<BaseLayout
+  title="Pinupbonuslar Məsuliyyətli Oyun Bələdçisi"
+  description="Məsuliyyətli oyun bələdçisi: limit qoymaq, risk siqnallarını görmək, fasilə planı qurmaq və yardım axtarmaq üçün praktik çərçivə."
+  path="/pinupbonuslar-responsible-gambling-guide/"
+  image="/assets/banner-share.jpg"
+  breadcrumb={[
+    { name: "Əsas", href: "/" },
+    { name: "Məsuliyyətli oyun", href: "/pinupbonuslar-responsible-gambling-guide/" }
+  ]}
+  headerCta={{
+    label: "Əsas səhifə",
+    href: "/",
+    variant: "secondary"
+  }}
+>
+  <section class="hero container">
+    <div>
+      <div class="meta-row">
+        <span class="meta-chip">Responsible gambling</span>
+        <span class="meta-chip">18+ risk awareness</span>
+        <span class="meta-chip warm">Yenilənib: 7 aprel 2026</span>
+      </div>
+      <h1>Məsuliyyətli oyun üçün praktik çərçivə</h1>
+      <p class="lead">
+        Qumar əyləncə xərci kimi yanaşılmalıdır, gəlir modeli kimi yox. Vaxt, pul və emosional nəzarət pozulmağa başlayırsa,
+        ən düzgün addım fasilə verməkdir.
+      </p>
+      <p>
+        Bu səhifə klinik diaqnoz vermir və müalicə xidməti göstərmir. Məqsəd risk siqnallarını tanımaq və istifadəçiyə
+        öz limitlərini əvvəlcədən qurmağa kömək etməkdir.
+      </p>
+    </div>
+    <div class="hero-aside reveal">
+      <div class="surface glow">
+        <h2>Əsas prinsip</h2>
+        <p>Yalnız itirməyə hazır olduğunuz məbləğlə oynayın, sessiya müddəti təyin edin və uduzmanı təqib etməyin.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="surface alt">
+      <h2>Özünü idarə etmə qaydaları</h2>
+      <ul class="key-list">
+        <li>Oyuna başlamazdan əvvəl vaxt limiti təyin edin və sona çatanda dayanın.</li>
+        <li>Gündəlik və həftəlik büdcə həddini öncədən seçin, emosional anda onu artırmayın.</li>
+        <li>Qumarı borc bağlama və ya gəlir yaratma vasitəsi kimi görməyin.</li>
+        <li>Stress, yorğunluq, alkoqol və mübahisə sonrası qərar anlarında oynamayın.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="cards">
+      <div class="card">
+        <h3>Davranış siqnalları</h3>
+        <p>
+          Sessiyanı planlanandan uzatmaq, limitləri tez-tez qaldırmaq və yaxınlardan gizli oynamaq artıq risk siqnalıdır.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Maliyyə siqnalları</h3>
+        <p>
+          Kredit, borc və gündəlik yaşayış büdcəsindən oyun üçün vəsait ayırmaq məsuliyyətli çərçivədən çıxmaq deməkdir.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Emosional siqnallar</h3>
+        <p>
+          Oyun bitəndən sonra güclü narahatlıq, utanc və ya “mütləq geri qazanmalıyam” hissi yaranırsa, fasilə vaxtıdır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="split-grid">
+      <div class="surface glow">
+        <h2>Özünüzə verə biləcəyiniz 4 sual</h2>
+        <ul class="key-list">
+          <li>Bu gün oynamaq üçün ayırdığım məbləği itirsəm, sakit qala biləcəyəmmi?</li>
+          <li>Oyunu dayandırmaq üçün əvvəlcədən vaxt təyin etmişəmmi?</li>
+          <li>Hazırkı emosional vəziyyətim qərar vermək üçün uyğundurmu?</li>
+          <li>Uduzsam, onu “geri qazanmaq” üçün plan qurmuram ki?</li>
+        </ul>
+      </div>
+      <div class="surface alt">
+        <h2>Fasilə planı</h2>
+        <ul class="key-list">
+          <li>Hesab limitlərini azaldın və ya müvəqqəti özünü məhdudlaşdırma alətlərini araşdırın.</li>
+          <li>Ödəniş üsullarınızı oyun büdcəsindən ayırın.</li>
+          <li>Yaxın biri ilə açıq danışın və nəzarət siqnalı təyin edin.</li>
+          <li>Lokal peşəkar psixoloji və asılılıq dəstəyi xidmətlərinə müraciət edin.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="callout">
+      <div>
+        <h3>Nəzarət azalırsa, dayanmaq qərarın özüdür</h3>
+        <p>
+          Ən vacib bacarıq daha çox oynamaq deyil, vaxtında fasilə verməkdir. Qumar həyati ehtiyacların yerini almamalıdır.
+        </p>
+      </div>
+      <div class="cta-group">
+        <a class="btn" href="/pinupbonuslar-terms-and-conditions/">
+          Şərtləri oxu
+        </a>
+        <a class="btn secondary" href="/pinupbonuslar-contact-support/">
+          Support istiqaməti
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <LinkCluster
+    title="Trust və disclosure səhifələri"
+    description="Məsuliyyətli oyun mesajı hüquqi və disclosure səhifələri ilə birgə daha tam görünür."
+    links={trustCards.filter((item) => item.href !== "/pinupbonuslar-responsible-gambling-guide/")}
+  />
+</BaseLayout>

@@ -1,0 +1,239 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FaqList from "../../components/FaqList.astro";
+import LinkCluster from "../../components/LinkCluster.astro";
+import PromoImage from "../../components/PromoImage.astro";
+import { site } from "../../data/site";
+
+const faq = [
+  {
+    question: "Pin Up tətbiqini haradan yükləmək lazımdır?",
+    answer:
+      "Yalnız rəsmi platformadan və ya onun yönləndirdiyi rəsmi mağaza axınından. Üçüncü tərəf APK mənbələri təhlükəsizlik riski yaradır."
+  },
+  {
+    question: "Android və iOS üçün proses eynidirmi?",
+    answer:
+      "Xeyr. Android-də APK quraşdırması, iOS-da isə mağaza və ya rəsmi mobil axın fərqli ola bilər. Ona görə addımlar platformaya görə ayrılır."
+  },
+  {
+    question: "Tətbiq mütləq lazımdırmı?",
+    answer:
+      "Xeyr. Mobil brauzer də işləyir, amma tez-tez daxil olan istifadəçi üçün tətbiq daha rahat ola bilər."
+  },
+  {
+    question: "Yükləmədən sonra bonus və payment işləyirmi?",
+    answer:
+      "Adətən bəli, çünki tətbiq tam hesab axınına xidmət edir. Yenə də konkret şərt və limitlər operator tərəfində təsdiqlənməlidir."
+  }
+];
+
+const related = [
+  {
+    title: "Pin Up giriş",
+    href: "/pin-up-giris/",
+    description: "Tətbiqi qurduqdan sonra login addımlarını ayrıca yoxlayın."
+  },
+  {
+    title: "Pin Up ödəniş",
+    href: "/pin-up-payment/",
+    description: "Mobil cihazda depozit və withdrawal edərkən nələrə diqqət etmək lazım olduğu."
+  },
+  {
+    title: "Pin Up bonus",
+    href: "/pin-up-bonus/",
+    description: "Tətbiq üzərindən də görülə bilən promo və welcome paketləri."
+  }
+];
+---
+
+<BaseLayout
+  title="Pin Up Yüklə — Android APK, iOS və Təhlükəsiz Mobil Giriş"
+  description="Pin Up yüklə bələdçisi: Android APK, iOS axını, mobil brauzer alternativi və yalnız rəsmi mənbədən download etmək üçün yoxlama siyahısı."
+  path="/pin-up-download/"
+  faq={faq}
+  image={site.defaultImage}
+  breadcrumb={[
+    { name: "Əsas", href: "/" },
+    { name: "Yüklə", href: "/pin-up-download/" }
+  ]}
+  headerCta={{
+    label: "Yüklə",
+    href: site.affiliateUrl,
+    rel: "sponsored nofollow"
+  }}
+>
+  <section class="hero container">
+    <div>
+      <div class="meta-row">
+        <span class="meta-chip">Download intent</span>
+        <span class="meta-chip">Android + iOS</span>
+        <span class="meta-chip warm">Yenilənib: 7 aprel 2026</span>
+      </div>
+      <h1>Pin Up yüklə: təhlükəsiz mobil tətbiq axını və brauzer alternativi</h1>
+      <p class="lead">
+        “Pin Up yüklə” sorğusunda ən vacib sual tətbiqin olub-olmaması deyil, yükləmə mənbəyinin etibarlı
+        olub-olmamasıdır. Xüsusən Android APK üçün bu səhifə məhz təhlükəsizlik lensi ilə yazılıb.
+      </p>
+      <p>
+        Əgər sadəcə tez daxil olmaq istəyirsinizsə, mobil brauzer kifayət edə bilər. Əgər push bildiriş, daha
+        sürətli launch və device-friendly təcrübə istəyirsinizsə, rəsmi tətbiq daha uyğun ola bilər.
+      </p>
+      <div class="cta-group">
+        <a class="btn" href={site.affiliateUrl} rel="sponsored nofollow">
+          Rəsmi mənbəyə keç
+        </a>
+        <a class="btn secondary" href="/pin-up-giris/">
+          Giriş bələdçisi
+        </a>
+      </div>
+    </div>
+    <div class="hero-aside reveal">
+      <div class="media-frame">
+        <PromoImage variant="hero" alt="Pin Up mobil tətbiq bələdçisi banneri" loading="eager" fetchpriority="high" />
+      </div>
+      <div class="surface alt">
+        <h2>Safe download checklist</h2>
+        <ul class="pill-list">
+          <li>Yalnız rəsmi mənbə</li>
+          <li>APK faylı üçün domen yoxlanışı</li>
+          <li>Quraşdırmadan sonra login test</li>
+          <li>Köhnə build-lərdən uzaq durmaq</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="answer-card">
+      <h2>Qısa cavab</h2>
+      <p>
+        <strong>
+          Pin Up tətbiqini yalnız rəsmi axından yükləmək lazımdır; Android APK və iOS quraşdırması platformaya görə fərqlənir.
+        </strong>
+      </p>
+      <p>
+        Tətbiq rahatlıq verir, amma login və payment funksiyaları mobil brauzerdə də mövcud ola bilər. Seçim istifadə tezliyinizdən asılıdır.
+      </p>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="section-header">
+      <h2>Platformanıza uyğun variantı seçin</h2>
+      <p class="lead">Hər cihaz üçün eyni mesaj yox, fərqli quraşdırma məntiqi var.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Android APK</h3>
+        <p>
+          Rəsmi mənbədən yükləmə ən vacib şərtdir. Naməlum mənbə icazəsi yalnız etibarlı build üçün verilməlidir,
+          sonra isə icazələri yenidən nəzərdən keçirmək məntiqlidir.
+        </p>
+      </div>
+      <div class="card">
+        <h3>iOS axını</h3>
+        <p>
+          iPhone və iPad istifadəçiləri üçün proses daha çox rəsmi store və ya operatorun yönləndirdiyi mobil axına əsaslanır.
+          Ona görə “APK” məntiqi burada keçərli deyil.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Mobil brauzer</h3>
+        <p>
+          Quraşdırma istəmirsinizsə, mobil web kifayətdir. Əsas oyun, bonus və payment funksiyaları üçün bu, çox vaxt yetərlidir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="table-wrap">
+      <table aria-label="Pin Up tətbiq və mobil brauzer müqayisəsi">
+        <thead>
+          <tr>
+            <th>Meyar</th>
+            <th>Tətbiq</th>
+            <th>Mobil brauzer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Giriş sürəti</td>
+            <td>Biometrik və saxlanılmış sessiya ilə daha rahat ola bilər</td>
+            <td>Hər dəfə brauzer üzərindən giriş etmək lazım gəlir</td>
+          </tr>
+          <tr>
+            <td>Push bildiriş</td>
+            <td>Adətən mövcuddur</td>
+            <td>Məhdud və ya yoxdur</td>
+          </tr>
+          <tr>
+            <td>Download riski</td>
+            <td>Yalnız rəsmi mənbədə təhlükəsizdir</td>
+            <td>Quraşdırma riski yoxdur</td>
+          </tr>
+          <tr>
+            <td>Payment və bonus axını</td>
+            <td>Adətən tam funksionaldır</td>
+            <td>Adətən tam funksionaldır</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="split-grid">
+      <div class="surface glow">
+        <h2>Quraşdırma zamanı yoxlayın</h2>
+        <ul class="key-list">
+          <li>Fayl və ya store keçidi rəsmi domen üzərindən açılır.</li>
+          <li>Quraşdırmadan sonra tətbiq sizdən həddən artıq icazə istəmir.</li>
+          <li>İlk launch-dan sonra login formu və branding normal görünür.</li>
+          <li>Köhnə cihazdasınızsa, brauzer versiyasını alternativ kimi saxlayın.</li>
+        </ul>
+      </div>
+      <div class="surface alt">
+        <h2>Ən çox rast gəlinən problemlər</h2>
+        <ul class="key-list">
+          <li><strong>Android xəbərdarlığı:</strong> APK üçün bu normal ola bilər, amma mənbə mütləq rəsmi olmalıdır.</li>
+          <li><strong>Quraşdırma açılmır:</strong> cihaz versiyası və storage boşluğu yoxlanmalıdır.</li>
+          <li><strong>Login alınmır:</strong> bu artıq download deyil, giriş problemidir və login səhifəsində araşdırılmalıdır.</li>
+          <li><strong>Köhnə build:</strong> tətbiqi vaxtaşırı yeniləmək lazımdır.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="callout">
+      <div>
+        <h3>APK tapdınızsa, əvvəl mənbəni sorğulayın</h3>
+        <p>
+          “Sürətli download” vədi verən üçüncü tərəf saytlar affiliate conversion-dan daha çox təhlükəsizlik riski yarada bilər. Rəsmi olmayan build-ləri quraşdırmayın.
+        </p>
+      </div>
+      <div class="cta-group">
+        <a class="btn" href={site.affiliateUrl} rel="sponsored nofollow">
+          Rəsmi yükləmə axını
+        </a>
+        <a class="btn secondary" href="/pin-up-giris/">
+          Sonra giriş et
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <FaqList
+    title="Pin Up yüklə haqqında tez-tez verilən suallar"
+    description="Tətbiq, APK təhlükəsizliyi və mobil alternativlər barədə əsas cavablar."
+    items={faq}
+  />
+
+  <LinkCluster
+    title="Yükləmədən sonra baxmağa dəyər"
+    description="Download intent adətən login, bonus və payment intentlərinə bağlanır."
+    links={related}
+  />
+</BaseLayout>

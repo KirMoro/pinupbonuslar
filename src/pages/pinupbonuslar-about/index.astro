@@ -1,0 +1,172 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import LinkCluster from "../../components/LinkCluster.astro";
+import { guideCards, trustCards } from "../../data/site";
+---
+
+<BaseLayout
+  title="Pinupbonuslar Haqqında — Redaksiya Prinsipləri və Şəffaflıq"
+  description="Pinupbonuslar.com haqqında səhifə: layihənin məqsədi, affiliate disclosure, fakt yoxlama qaydası və məzmunun necə yeniləndiyi."
+  path="/pinupbonuslar-about/"
+  pageType="AboutPage"
+  image="/assets/banner-share.jpg"
+  breadcrumb={[
+    { name: "Əsas", href: "/" },
+    { name: "Haqqımızda", href: "/pinupbonuslar-about/" }
+  ]}
+  headerCta={{
+    label: "Əsas səhifə",
+    href: "/",
+    variant: "secondary"
+  }}
+>
+  <section class="hero container">
+    <div>
+      <div class="meta-row">
+        <span class="meta-chip">About page</span>
+        <span class="meta-chip">Editorial transparency</span>
+        <span class="meta-chip warm">Yenilənib: 7 aprel 2026</span>
+      </div>
+      <h1>Pinupbonuslar.com nədir və bu layihə nəyi həll edir?</h1>
+      <p class="lead">
+        Pinupbonuslar.com rəsmi operator saytı deyil. Bu, Azərbaycan dilində Pin Up ilə bağlı əsas intentləri
+        ayrıca URL-lərdə toplayan affiliate məlumat layihəsidir: giriş, qeydiyyat, bonus, yükləmə, payment və trust səhifələri.
+      </p>
+      <p>
+        Layihənin məqsədi istifadəçini bir CTA ilə sıxışdırmaq yox, axtarış sorğusunun arxasındakı real sualı
+        cavablandırmaqdır. Nəticədə sayt həm search intent, həm trust, həm də conversion keyfiyyəti baxımından daha təmiz işləyir.
+      </p>
+    </div>
+    <div class="hero-aside reveal">
+      <div class="surface glow">
+        <h2>Əsas prinsip</h2>
+        <p>
+          Məlumatı əməliyyatdan ayırırıq. Sayt hesab açmır, payout etmir, KYC sənədi toplamır və operator adından
+          support vermir. Biz yalnız bələdçi qatını qururuq.
+        </p>
+      </div>
+      <div class="surface alt">
+        <h2>İstifadəçiyə vəd etdiyimiz şey</h2>
+        <ul class="pill-list">
+          <li>Aydın intent ayrımı</li>
+          <li>Affiliate disclosure</li>
+          <li>Rəsmi mənbəni yoxlama xatırlatması</li>
+          <li>18+ məsuliyyətli oyun çərçivəsi</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="section-header">
+      <h2>Bu layihə niyə mövcuddur?</h2>
+      <p class="lead">Əsas problem məlumatın dağınıq və çox vaxt etibarsız kanallarda paylaşılmasıdır.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Intentləri ayırmaq üçün</h3>
+        <p>
+          “Pin Up giriş” axtaran istifadəçi ilə “Pin Up bonus” axtaran istifadəçinin məqsədi eyni deyil.
+          Bu fərqi qorumaq həm SEO, həm UX, həm də affiliate keyfiyyəti üçün vacibdir.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Saxta və köhnə məzmunu azaltmaq üçün</h3>
+        <p>
+          Mirror domenlər, köhnə promo səhifələr və qeyri-rəsmi APK mənbələri istifadəçini yanlış qərara itələyə bilər.
+          Bələdçi strukturu bu riski azaltmaq üçün qurulub.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Trust siqnallarını açıq saxlamaq üçün</h3>
+        <p>
+          Affiliate model, redaksiya sərhədi və rəsmi operatorla sayt arasındakı fərq gizlədilmir. Bu, uzunmüddətli trust üçün şərtdir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="section-header">
+      <h2>Məzmunu necə hazırlayırıq?</h2>
+      <p class="lead">Yaxşı affiliate content qısa headline yazmaqdan çox, qərar keyfiyyətini artırmalıdır.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-step">1</span>
+        <h3>Əsas intent müəyyən edilir</h3>
+        <p>Hər səhifə yalnız bir əsas sorğu niyyətinə fokuslanır və yan mövzular ona yardımçı şəkildə yerləşdirilir.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">2</span>
+        <h3>Şərt və risk nöqtələri ayrıca göstərilir</h3>
+        <p>Bonus, payout, yükləmə və login kimi mövzuların risk daşıyan hissələri gizlədilmir, əksinə önə çıxarılır.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">3</span>
+        <h3>Rəsmi yoxlama çağırışı saxlanılır</h3>
+        <p>Saytdakı hər kritik maddə istifadəçini son təsdiq üçün rəsmi operator mühitinə yönəldir.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">4</span>
+        <h3>Məzmun yenilənir və təmizlənir</h3>
+        <p>Köhnəlmiş rəqəm, link və ifadələr aşkarlananda səhifələr yenidən işlənir ki, thin və stale affiliate hissi yaranmasın.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="split-grid">
+      <div class="surface glow">
+        <h2>Affiliate disclosure</h2>
+        <p>
+          Bəzi keçidlər komissiya gətirə bilər. Bu, saytın maliyyələşmə modelidir və HTML atributlarında `sponsored`
+          və `nofollow` ilə açıq şəkildə işarələnir. Lakin komissiya məzmunun risk hissələrinin gizlədilməsi üçün istifadə olunmur.
+        </p>
+      </div>
+      <div class="surface alt">
+        <h2>Rəsmi operatoru əvəz etmirik</h2>
+        <p>
+          Hesab bloklanması, bonus eligibility, withdrawal gecikməsi və verifikasiya ilə bağlı son söz həmişə rəsmi operatora məxsusdur.
+          Bu sayt həmin proseslərdə vasitəçi rolunu oynamır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="callout">
+      <div>
+        <h3>Məzmunda fakt xətası gördünüz?</h3>
+        <p>
+          Dəqiq URL, problem təsviri və mümkün olduqda rəsmi istinad ilə bildirin. Bu, düzəlişi həm sürətləndirir, həm də keyfiyyətini artırır.
+        </p>
+      </div>
+      <div class="cta-group">
+        <a class="btn" href="/pinupbonuslar-contact-support/">
+          Əlaqə istiqaməti
+        </a>
+        <a
+          class="btn secondary"
+          href="https://github.com/KirMoro/pinupbonuslar/issues"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          GitHub Issues
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <LinkCluster
+    title="Əsas istifadəçi bələdçiləri"
+    description="Commercial intent daşıyan core səhifələr."
+    links={guideCards}
+  />
+
+  <LinkCluster
+    title="Trust səhifələri"
+    description="Şəffaflıq, support və hüquqi sərhədləri ayrıca izah edən bölmələr."
+    links={trustCards.filter((item) => item.href !== "/pinupbonuslar-about/")}
+  />
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import type { LinkCard } from "../data/site";
+
+interface Props {
+  title: string;
+  description?: string;
+  links: LinkCard[];
+}
+
+const { title, description, links } = Astro.props;
+---
+
+<section class="section container reveal">
+  <div class="section-header">
+    <h2>{title}</h2>
+    {description && <p class="lead">{description}</p>}
+  </div>
+  <div class="cards link-cards">
+    {
+      links.map((link) => (
+        <a class="card card-link" href={link.href}>
+          <h3>{link.title}</h3>
+          <p>{link.description}</p>
+          <span class="text-link">Səhifəyə keç</span>
+        </a>
+      ))
+    }
+  </div>
+</section>

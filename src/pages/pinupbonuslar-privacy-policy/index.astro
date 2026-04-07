@@ -1,0 +1,126 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import LinkCluster from "../../components/LinkCluster.astro";
+import { trustCards } from "../../data/site";
+---
+
+<BaseLayout
+  title="Pinupbonuslar Məxfilik Siyasəti və Məlumat İstifadəsi"
+  description="Pinupbonuslar məxfilik siyasəti: analitika, loglar, xarici keçidlər və redaksiya sorğuları zamanı hansı məlumatların emal oluna biləcəyi."
+  path="/pinupbonuslar-privacy-policy/"
+  pageType="PrivacyPolicy"
+  image="/assets/banner-share.jpg"
+  breadcrumb={[
+    { name: "Əsas", href: "/" },
+    { name: "Məxfilik siyasəti", href: "/pinupbonuslar-privacy-policy/" }
+  ]}
+  headerCta={{
+    label: "Əsas səhifə",
+    href: "/",
+    variant: "secondary"
+  }}
+>
+  <section class="hero container">
+    <div>
+      <div class="meta-row">
+        <span class="meta-chip">Privacy page</span>
+        <span class="meta-chip">Analytics disclosure</span>
+        <span class="meta-chip warm">Yenilənib: 7 aprel 2026</span>
+      </div>
+      <h1>Pinupbonuslar məxfilik siyasəti</h1>
+      <p class="lead">
+        Bu sayt hesab yaratmadığı və ödəniş qəbul etmədiyi üçün operator səviyyəsində həssas maliyyə məlumatı toplamır.
+        Əsasən analitika, texniki loglar və istifadəçi sorğusu zamanı təqdim edilən minimal məlumat emal oluna bilər.
+      </p>
+      <p>
+        Xarici operator və tərəfdaş keçidlərinə keçdiyiniz andan etibarən həmin xidmətlərin öz privacy və cookie siyasəti qüvvəyə minə bilər.
+        Buna görə bu səhifə yalnız bu saytın qatını izah edir.
+      </p>
+    </div>
+    <div class="hero-aside reveal">
+      <div class="surface glow">
+        <h2>Qısa xülasə</h2>
+        <p>
+          Sayt analitika siqnalları və redaksiya sorğuları ilə məhdud işləyir. Hesab balansı, bank kartı və operator credential-ları burada saxlanmır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="surface alt">
+      <h2>Hansı məlumatlar emal oluna bilər?</h2>
+      <ul class="key-list">
+        <li>Səhifə baxışı, referrer, cihaz və brauzer tipi kimi texniki analitika siqnalları.</li>
+        <li>Əlaqə və hüquqi düzəliş sorğusunda təqdim etdiyiniz URL, mətn və mümkün istinadlar.</li>
+        <li>Affiliate kliklərin ümumi performans siqnalları, lakin operator hesab fəaliyyəti bu saytın nəzarətində deyil.</li>
+        <li>Texniki səhv diaqnostikası üçün lazım olan minimal server və ya platforma logları.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="cards">
+      <div class="card">
+        <h3>Analitika</h3>
+        <p>
+          Ahrefs Analytics skripti trafik davranışını və səhifə performansını anlamağa kömək edir. Məqsəd content keyfiyyətini izləməkdir, fərdi profil qurmaq deyil.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Xarici keçidlər</h3>
+        <p>
+          Rəsmi operator və tərəfdaş linklərinə keçəndə həmin xidmətlərin privacy siyasəti ayrıca tətbiq olunur. İstifadəçi son qərarı həmin platformalarda da oxumalıdır.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Texniki loglar</h3>
+        <p>
+          Broken link, səhv və təhlükəsizlik diaqnostikası üçün platforma səviyyəsində texniki loglar yarana bilər. Onlar marketinq profilinə çevrilmək üçün nəzərdə tutulmayıb.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="split-grid">
+      <div class="surface glow">
+        <h2>İstifadəçi hüquqları və sorğular</h2>
+        <p>
+          Əgər bu saytın məlumat istifadəsi barədə sualınız varsa, konkret URL və izahla support yönləndirmə səhifəsi vasitəsilə müraciət edə bilərsiniz.
+        </p>
+      </div>
+      <div class="surface alt">
+        <h2>Nə bu siyasətə daxil deyil?</h2>
+        <p>
+          Operatorun login, bonus, KYC və payment sistemlərində emal olunan məlumatlar bu sənədə aid deyil. Onlar ayrıca rəsmi platformanın siyasəti ilə tənzimlənir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="callout">
+      <div>
+        <h3>Privacy sualı varsa, sorğunu dəqiqləşdirin</h3>
+        <p>
+          “Sayt mənim məlumatımı saxlayırmı?” kimi ümumi sual əvəzinə konkret URL və hadisəni göstərin. Bu, cavabı daha dəqiq edir.
+        </p>
+      </div>
+      <div class="cta-group">
+        <a class="btn" href="/pinupbonuslar-contact-support/">
+          Sorğu göndər
+        </a>
+        <a class="btn secondary" href="/pinupbonuslar-terms-and-conditions/">
+          Şərtlər səhifəsi
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <LinkCluster
+    title="Əlaqəli trust səhifələri"
+    description="Privacy sənədi support və terms səhifələri ilə birlikdə daha tam görünür."
+    links={trustCards.filter((item) => item.href !== "/pinupbonuslar-privacy-policy/")}
+  />
+</BaseLayout>

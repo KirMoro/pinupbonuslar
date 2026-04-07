@@ -1,0 +1,81 @@
+---
+import { site } from "../data/site";
+
+interface Props {
+  variant: "hero" | "square" | "strip";
+  alt: string;
+  loading?: "lazy" | "eager";
+  fetchpriority?: "auto" | "high" | "low";
+}
+
+const {
+  variant,
+  alt,
+  loading = "lazy",
+  fetchpriority = "auto"
+} = Astro.props;
+---
+
+<a href={site.affiliateUrl} rel="sponsored nofollow" aria-label={alt}>
+  {
+    variant === "hero" && (
+      <picture>
+        <source
+          type="image/webp"
+          srcset="/assets/banner-hero-960.webp 960w, /assets/banner-hero.webp 1920w"
+          sizes="(max-width: 900px) 100vw, 45vw"
+        />
+        <img
+          src="/assets/banner-hero.png"
+          width="1920"
+          height="800"
+          alt={alt}
+          loading={loading}
+          fetchpriority={fetchpriority}
+          decoding="async"
+        />
+      </picture>
+    )
+  }
+  {
+    variant === "square" && (
+      <picture>
+        <source
+          type="image/webp"
+          srcset="/assets/banner-square-540.webp 540w, /assets/banner-square.webp 1080w"
+          sizes="(max-width: 900px) 100vw, 44vw"
+        />
+        <img
+          src="/assets/banner-square.png"
+          width="1080"
+          height="1080"
+          alt={alt}
+          loading={loading}
+          fetchpriority={fetchpriority}
+          decoding="async"
+        />
+      </picture>
+    )
+  }
+  {
+    variant === "strip" && (
+      <picture>
+        <source
+          type="image/webp"
+          srcset="/assets/banner-strip-640.webp 640w, /assets/banner-strip.webp 1280w"
+          sizes="100vw"
+        />
+        <img
+          class="banner-strip"
+          src="/assets/banner-strip.png"
+          width="1280"
+          height="160"
+          alt={alt}
+          loading={loading}
+          fetchpriority={fetchpriority}
+          decoding="async"
+        />
+      </picture>
+    )
+  }
+</a>

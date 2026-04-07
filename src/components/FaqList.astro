@@ -1,0 +1,28 @@
+---
+import type { FaqItem } from "../data/site";
+
+interface Props {
+  title: string;
+  description?: string;
+  items: FaqItem[];
+}
+
+const { title, description, items } = Astro.props;
+---
+
+<section class="section container reveal">
+  <div class="section-header">
+    <h2>{title}</h2>
+    {description && <p class="lead">{description}</p>}
+  </div>
+  <div class="faq">
+    {
+      items.map((item) => (
+        <details>
+          <summary>{item.question}</summary>
+          <p>{item.answer}</p>
+        </details>
+      ))
+    }
+  </div>
+</section>

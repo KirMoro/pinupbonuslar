@@ -1,0 +1,256 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FaqList from "../../components/FaqList.astro";
+import LinkCluster from "../../components/LinkCluster.astro";
+import PromoImage from "../../components/PromoImage.astro";
+import { site } from "../../data/site";
+
+const faq = [
+  {
+    question: "Pin Up giriş üçün ən təhlükəsiz addım hansıdır?",
+    answer:
+      "Əvvəlcə domeni və ya etibarlı yönləndirmə linkini yoxlayın, sonra e-poçt və ya telefonla daxil olun. Saxta mirror səhifələrdən uzaq durun."
+  },
+  {
+    question: "Şifrəni unutmuşamsa nə etməliyəm?",
+    answer:
+      "Rəsmi login formundakı bərpa axınını başladın. Bu sayt hesab parolu saxlamır və bərpa prosesini idarə etmir."
+  },
+  {
+    question: "Mobil cihazda giriş ayrıca işləyir?",
+    answer:
+      "Bəli. Mobil brauzer və tətbiq daxilolmaları eyni hesab məlumatları ilə işləyir, yalnız interfeys və biometrik rahatlıq fərqlənə bilər."
+  },
+  {
+    question: "Bir neçə uğursuz cəhd hesabı bloklaya bilər?",
+    answer:
+      "Bəli, müvəqqəti təhlükəsizlik bloklaması yarana bilər. Belə halda bir qədər gözləyin və ya rəsmi operator dəstəyinə müraciət edin."
+  }
+];
+
+const related = [
+  {
+    title: "Pin Up qeydiyyat",
+    href: "/pin-up-qeydiyyat/",
+    description: "Hesabınız yoxdursa, yeni profil açmaq üçün ayrıca addım-addım bələdçi."
+  },
+  {
+    title: "Pin Up yüklə",
+    href: "/pin-up-download/",
+    description: "Login-i tətbiq üzərindən etmək istəyənlər üçün Android və iOS bələdçisi."
+  },
+  {
+    title: "Əlaqə və support",
+    href: "/pinupbonuslar-contact-support/",
+    description: "Bloklanma, KYC və texniki problem zamanı operator dəstəyi ilə sayt dəstəyini ayırın."
+  }
+];
+---
+
+<BaseLayout
+  title="Pin Up Giriş — Rəsmi Login, Şifrə Bərpası və Təhlükəsizlik"
+  description="Pin Up giriş üçün aydın login bələdçisi: rəsmi domen yoxlaması, mobil daxilolma, şifrə bərpası və bloklanma halları."
+  path="/pin-up-giris/"
+  faq={faq}
+  image={site.defaultImage}
+  breadcrumb={[
+    { name: "Əsas", href: "/" },
+    { name: "Giriş", href: "/pin-up-giris/" }
+  ]}
+  headerCta={{
+    label: "Giriş et",
+    href: site.affiliateUrl,
+    rel: "sponsored nofollow"
+  }}
+>
+  <section class="hero container">
+    <div>
+      <div class="meta-row">
+        <span class="meta-chip">Login intent</span>
+        <span class="meta-chip warm">Anti-phishing fokus</span>
+        <span class="meta-chip">Yenilənib: 7 aprel 2026</span>
+      </div>
+      <h1>Pin Up giriş üçün rəsmi login addımları və hesab təhlükəsizliyi</h1>
+      <p class="lead">
+        “Pin Up giriş” sorğusunda istifadəçinin əsas riski yanlış domenə düşməkdir. Buna görə bu səhifə
+        yalnız login düyməsini deyil, domen yoxlaması, mobil daxilolma və şifrə bərpası ardıcıllığını da göstərir.
+      </p>
+      <p>
+        Mövcud hesabınız varsa, e-poçt və ya telefonla daxil olun. Hesabınız yoxdursa, qeydiyyat bələdçisinə
+        keçmək daha düzgündür; login formunda ilişmək conversion-u yavaşıdır.
+      </p>
+      <div class="cta-group">
+        <a class="btn" href={site.affiliateUrl} rel="sponsored nofollow">
+          Rəsmi saytda giriş et
+        </a>
+        <a class="btn secondary" href="/pin-up-qeydiyyat/">
+          Yeni hesab yarat
+        </a>
+      </div>
+    </div>
+    <div class="hero-aside reveal">
+      <div class="media-frame">
+        <PromoImage variant="hero" alt="Pin Up giriş səhifəsi üçün banner" loading="eager" fetchpriority="high" />
+      </div>
+      <div class="surface alt">
+        <h2>Login zamanı əvvəl bunları yoxla</h2>
+        <ul class="pill-list">
+          <li>Domen adı düz yazılıb</li>
+          <li>HTTPS və təhlükəsiz bağlantı aktivdir</li>
+          <li>Şifrəni yalnız rəsmi formaya daxil edirsiniz</li>
+          <li>Problemdə operator dəstəyinə keçirsiniz</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="answer-card">
+      <h2>Qısa cavab</h2>
+      <p>
+        <strong>
+          Pin Up login üçün ən təhlükəsiz yol rəsmi linkə keçmək, domeni yoxlamaq və yalnız sonra hesab məlumatlarını daxil etməkdir.
+        </strong>
+      </p>
+      <p>
+        Əgər hesabınız yoxdursa, login səhifəsində vaxt itirməyin; qeydiyyat bələdçisinə keçin və sonra bonus və payment axınına daxil olun.
+      </p>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="section-header">
+      <h2>Pin Up giriş addım-addım</h2>
+      <p class="lead">Sadə görünən login prosesi əslində dörd yoxlama nöqtəsindən ibarətdir.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-step">1</span>
+        <h3>Rəsmi keçidə daxil olun</h3>
+        <p>
+          Əvvəlcə ünvan çubuğunu və domen adını yoxlayın. “Mirror”, qısaldılmış link və ya tanımadığınız redirect
+          səhifələrindən daxil olursunuzsa, davam etməzdən əvvəl mənbəni yenidən qiymətləndirin.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">2</span>
+        <h3>E-poçt və ya telefonla daxil olun</h3>
+        <p>
+          Qeydiyyatda istifadə etdiyiniz credential-ları yazın. Parolu brauzerdə autofill ilə daxil edirsinizsə,
+          brauzerin təklif etdiyi domeni yenə də manual olaraq yoxlamaq məntiqlidir.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">3</span>
+        <h3>Təhlükəsizlik bildirişlərinə baxın</h3>
+        <p>
+          Bəzi cihazlarda SMS təsdiqi, e-poçt yoxlaması və ya müvəqqəti təhlükəsizlik bildirimi görünə bilər.
+          Bu addımlar hesab müdafiəsi üçündür, onları keçmək üçün üçüncü tərəf “helper” alətlərə ehtiyac yoxdur.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">4</span>
+        <h3>Problem varsa bərpa axınına keçin</h3>
+        <p>
+          Şifrə yadınızda deyilsə, rəsmi reset prosedurundan istifadə edin. Bu sayt nə parol saxlayır, nə də reset linki yaradır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="table-wrap">
+      <table aria-label="Pin Up giriş üsulları">
+        <thead>
+          <tr>
+            <th>Giriş kanalı</th>
+            <th>Kimə uyğundur</th>
+            <th>Əsas üstünlük</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Desktop brauzer</td>
+            <td>Masaüstü oyun və tam kataloq görüntüsü istəyənlərə</td>
+            <td>Domeni və security elementlərini rahat yoxlamaq olur</td>
+          </tr>
+          <tr>
+            <td>Mobil brauzer</td>
+            <td>Tətbiq yükləmədən sürətli daxil olmaq istəyənlərə</td>
+            <td>Əlavə quraşdırma tələb etmir</td>
+          </tr>
+          <tr>
+            <td>Android / iOS tətbiqi</td>
+            <td>Tez-tez daxil olan aktiv istifadəçilərə</td>
+            <td>Biometrik rahatlıq və push bildirişləri</td>
+          </tr>
+          <tr>
+            <td>Sosial login</td>
+            <td>Uyğun hesab bağlayan istifadəçilərə</td>
+            <td>Şifrə xatırlama yükünü azalda bilər</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="split-grid">
+      <div class="surface glow">
+        <h2>Hesab təhlükəsizliyi checklist-i</h2>
+        <ul class="key-list">
+          <li>Şifrənizi eyni cihazda birdən çox şübhəli brauzerdə saxlamayın.</li>
+          <li>Login-dən sonra balans, valyuta və bonus statusunu bir dəfə yoxlayın.</li>
+          <li>Public Wi‑Fi üzərindən giriş edirsinizsə, əlavə ehtiyatlı davranın.</li>
+          <li>Dəstək adı ilə yazan naməlum Telegram və ya chat hesablarına məlumat verməyin.</li>
+        </ul>
+      </div>
+      <div class="surface alt">
+        <h2>Ən çox rast gəlinən login problemləri</h2>
+        <ul class="key-list">
+          <li><strong>Yanlış parol:</strong> tələsməyin, reset axını ilə bərpa edin.</li>
+          <li><strong>Müvəqqəti bloklama:</strong> çox uğursuz cəhddən sonra bir qədər gözləmək lazım ola bilər.</li>
+          <li><strong>Domen qarışıqlığı:</strong> axtarışdan gələn ilk nəticəyə kor-koranə etibar etməyin.</li>
+          <li><strong>Mobil giriş səhvi:</strong> tətbiq və brauzer versiyası fərqli davranırsa, digər kanalı sınayın.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="callout">
+      <div>
+        <h3>Giriş alınmırsa, problem həllini düzgün yerə aparın</h3>
+        <p>
+          Şifrə, bloklanma, KYC və hesab təhlükəsizliyi məsələləri operator dəstəyinə aiddir. Sayt məzmunu ilə bağlı düzəlişlər isə əlaqə səhifəsinə yönləndirilməlidir.
+        </p>
+      </div>
+      <div class="cta-group">
+        <a class="btn" href={site.affiliateUrl} rel="sponsored nofollow">
+          Yenidən cəhd et
+        </a>
+        <a class="btn secondary" href="/pinupbonuslar-contact-support/">
+          Əlaqə istiqaməti
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="media-frame">
+      <PromoImage variant="strip" alt="Pin Up giriş üçün promo banner" />
+    </div>
+  </section>
+
+  <FaqList
+    title="Pin Up giriş haqqında tez-tez verilən suallar"
+    description="Login flow, şifrə bərpası və mobil daxilolma üzrə əsas cavablar."
+    items={faq}
+  />
+
+  <LinkCluster
+    title="Girişdən sonra lazım ola biləcək səhifələr"
+    description="Login intent adətən qeydiyyat, tətbiq və support intentlərinə yaxın olur."
+    links={related}
+  />
+</BaseLayout>

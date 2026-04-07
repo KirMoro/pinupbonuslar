@@ -1,0 +1,255 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FaqList from "../../components/FaqList.astro";
+import LinkCluster from "../../components/LinkCluster.astro";
+import PromoImage from "../../components/PromoImage.astro";
+import { site } from "../../data/site";
+
+const faq = [
+  {
+    question: "Pin Up qeydiyyat neçə dəqiqə çəkir?",
+    answer:
+      "Əksər istifadəçi üçün 1-3 dəqiqə kifayətdir. E-poçt, telefon və ya sosial login üsulu vaxtı dəyişə bilər."
+  },
+  {
+    question: "AZN seçmək vacibdirmi?",
+    answer:
+      "Azərbaycandan oynayırsınızsa, AZN seçimi konvertasiya qarışıqlığını azaldır və bonus/ödəniş axınını daha aydın saxlayır."
+  },
+  {
+    question: "KYC qeydiyyat zamanı tələb olunur?",
+    answer:
+      "Adətən tam KYC ilk withdrawal mərhələsində ortaya çıxır, lakin operator risk siyasətinə görə daha tez də tələb edə bilər."
+  },
+  {
+    question: "Qeydiyyatdan sonra bonus avtomatik aktiv olur?",
+    answer:
+      "Adətən ilk depozitdən sonra welcome paket aktivləşir, amma promo şərti və eligibility-ni rəsmi platformada yenidən yoxlamaq lazımdır."
+  }
+];
+
+const related = [
+  {
+    title: "Pin Up bonus",
+    href: "/pin-up-bonus/",
+    description: "Welcome bonus paketi, promo kampaniyalar və wager qeydləri."
+  },
+  {
+    title: "Pin Up ödəniş",
+    href: "/pin-up-payment/",
+    description: "İlk depozit, AZN üsulları və KYC öncəsi nələri yoxlamaq lazım olduğu."
+  },
+  {
+    title: "Pin Up giriş",
+    href: "/pin-up-giris/",
+    description: "Qeydiyyatdan sonra hesabınıza necə təhlükəsiz daxil olmaq olar."
+  }
+];
+---
+
+<BaseLayout
+  title="Pin Up Qeydiyyat — Yeni Hesab Açmaq və AZN ilə Başlamaq"
+  description="Pin Up qeydiyyat üçün praktiki bələdçi: hesab açmaq, AZN seçimi, ilk depozitə hazırlıq və bonusu aktivləşdirmə ardıcıllığı."
+  path="/pin-up-qeydiyyat/"
+  faq={faq}
+  image={site.defaultImage}
+  breadcrumb={[
+    { name: "Əsas", href: "/" },
+    { name: "Qeydiyyat", href: "/pin-up-qeydiyyat/" }
+  ]}
+  headerCta={{
+    label: "Qeydiyyat",
+    href: site.affiliateUrl,
+    rel: "sponsored nofollow"
+  }}
+>
+  <section class="hero container">
+    <div>
+      <div class="meta-row">
+        <span class="meta-chip">Register intent</span>
+        <span class="meta-chip">AZN fokus</span>
+        <span class="meta-chip warm">Yenilənib: 7 aprel 2026</span>
+      </div>
+      <h1>Pin Up qeydiyyat üçün sadə addımlar, AZN seçimi və ilk bonus hazırlığı</h1>
+      <p class="lead">
+        “Pin Up qeydiyyat” sorğusunun məqsədi sadəcə formu doldurmaq deyil. İstifadəçi hansı valyutanı
+        seçəcəyini, hansı üsulla hesab açacağını və ilk depozitdən əvvəl nələri bilməli olduğunu axtarır.
+      </p>
+      <p>
+        Bu səhifə qeydiyyatı conversion mərkəzi kimi deyil, daha düzgün onboarding nöqtəsi kimi izah edir:
+        profil yarat, valyutanı ağıllı seç, sonra bonus və payment şərtlərini səhv etmədən davam etdir.
+      </p>
+      <div class="cta-group">
+        <a class="btn" href={site.affiliateUrl} rel="sponsored nofollow">
+          İndi hesab aç
+        </a>
+        <a class="btn secondary" href="/pin-up-bonus/">
+          Bonus şərtləri
+        </a>
+      </div>
+    </div>
+    <div class="hero-aside reveal">
+      <div class="media-frame">
+        <PromoImage variant="hero" alt="Pin Up qeydiyyat banneri" loading="eager" fetchpriority="high" />
+      </div>
+      <div class="surface alt">
+        <h2>Qeydiyyatda vacib 4 məqam</h2>
+        <ul class="pill-list">
+          <li>18+ olmaq</li>
+          <li>AZN valyutasını düzgün seçmək</li>
+          <li>Aktiv e-poçt və ya telefon istifadə etmək</li>
+          <li>İlk depozitdən əvvəl bonus qaydalarını oxumaq</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="answer-card">
+      <h2>Qısa cavab</h2>
+      <p>
+        <strong>
+          Pin Up hesab açmaq adətən bir neçə dəqiqə çəkir, amma düzgün valyuta və credential seçimi sonrakı deposit və withdrawal təcrübəsinə birbaşa təsir edir.
+        </strong>
+      </p>
+      <p>
+        Qeydiyyatdan dərhal sonra bonusu aktivləşdirmək istəyirsinizsə, əvvəl bonus və payment səhifələrinə göz gəzdirmək daha rasional seçimdir.
+      </p>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="section-header">
+      <h2>Pin Up hesab açmaq üçün 4 addım</h2>
+      <p class="lead">Qeydiyyat prosesini yalnız forma kimi yox, onboarding axını kimi düşünmək lazımdır.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-step">1</span>
+        <h3>Rəsmi qeydiyyat linkini açın</h3>
+        <p>
+          Axtarış nəticəsində və ya partner linkində olduğunuzu fərq etmirsinizsə, əvvəl domeni vizual olaraq yoxlayın.
+          İlk səhv adətən məhz burada baş verir.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">2</span>
+        <h3>Credential və valyutanı daxil edin</h3>
+        <p>
+          E-poçt və ya telefon seçimi rahatlıq məsələsidir, amma valyuta seçimi stratejidir. Azərbaycandan istifadə edirsinizsə,
+          AZN hesabı depozit və bonus məntiqini sadələşdirir.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">3</span>
+        <h3>Profil təsdiqini tamamlayın</h3>
+        <p>
+          E-poçt linki və ya SMS kodu ilə aktivləşdirmə gəlir. Bu mərhələni tələsmədən bitirmək sonradan login və təhlükəsizlik problemlərini azaldır.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">4</span>
+        <h3>İlk depozitə hazırlıq görün</h3>
+        <p>
+          Bonus almaq istəyirsinizsə, depozit etməzdən əvvəl welcome paketini, wager-i və payment üsullarını ayrıca yoxlayın. Bu, conversion sonrası sürprizləri azaldır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="table-wrap">
+      <table aria-label="Pin Up qeydiyyat üsulları">
+        <thead>
+          <tr>
+            <th>Qeydiyyat üsulu</th>
+            <th>Nə üçün seçilir</th>
+            <th>Qeyd</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>E-poçt ilə</td>
+            <td>Uzunmüddətli hesab idarəsi üçün rahatdır</td>
+            <td>Reset və bildiriş axını daha aydın olur</td>
+          </tr>
+          <tr>
+            <td>Telefon nömrəsi ilə</td>
+            <td>Sürətli onboard və SMS təsdiqi istəyənlərə</td>
+            <td>Aktiv nömrə saxlamaq vacibdir</td>
+          </tr>
+          <tr>
+            <td>Sosial login</td>
+            <td>Minimal friction axtaranlara</td>
+            <td>Bağlı hesabı sonradan izləmək lazımdır</td>
+          </tr>
+          <tr>
+            <td>Bir klik onboarding</td>
+            <td>Ən sürətli başlanğıc üçün</td>
+            <td>Sonradan profil tamamlanması tələb oluna bilər</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="split-grid">
+      <div class="surface glow">
+        <h2>Qeydiyyatdan sonra sizi nə gözləyir?</h2>
+        <ul class="key-list">
+          <li>7000+ oyun və live casino bölməsi birbaşa görünür.</li>
+          <li>AZN ilə hesab yaradılıbsa, payment axını daha sadə olur.</li>
+          <li>Bonus paketi üçün ilk depozit əsas trigger rolunu oynayır.</li>
+          <li>Withdrawal mərhələsində KYC və eyni üsul qaydası ön plana çıxa bilər.</li>
+        </ul>
+      </div>
+      <div class="surface alt">
+        <h2>Ən çox edilən səhvlər</h2>
+        <ul class="key-list">
+          <li>Valyutanı tələsik seçmək və sonra konvertasiya narazılığı yaşamaq.</li>
+          <li>Bonus şərtlərini oxumadan depozit etmək.</li>
+          <li>Saxta güzgü sayta düşərək login və register formalarını qarışdırmaq.</li>
+          <li>E-poçt və telefonun hansını istifadə etdiyini sonradan unudmaq.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="callout">
+      <div>
+        <h3>Qeydiyyatla bonus eyni şey deyil</h3>
+        <p>
+          Hesab açmaq onboarding-dir, bonus isə ayrıca təklif qatıdır. İkisini qarışdırmamaq conversion və trust baxımından daha doğrudur.
+        </p>
+      </div>
+      <div class="cta-group">
+        <a class="btn" href="/pin-up-bonus/">
+          Bonusu öyrən
+        </a>
+        <a class="btn secondary" href="/pin-up-payment/">
+          Payment baxışı
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="media-frame">
+      <PromoImage variant="square" alt="Pin Up qeydiyyat üçün bonus banneri" />
+    </div>
+  </section>
+
+  <FaqList
+    title="Pin Up qeydiyyat haqqında tez-tez verilən suallar"
+    description="Yeni hesab yaratmaq, AZN seçimi və ilk depozitə hazırlıq barədə qısa cavablar."
+    items={faq}
+  />
+
+  <LinkCluster
+    title="Qeydiyyatdan sonra oxumaq faydalıdır"
+    description="Register intent birbaşa bonus, payment və login səhifələrinə bağlanır."
+    links={related}
+  />
+</BaseLayout>

@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import LinkCluster from "../../components/LinkCluster.astro";
+import { trustCards } from "../../data/site";
+---
+
+<BaseLayout
+  title="Pinupbonuslar İstifadə Şərtləri və Hüquqi Qaydalar"
+  description="Pinupbonuslar istifadə şərtləri: 18+ auditoriya, affiliate keçidlər, məsuliyyət bölgüsü və rəsmi operator sənədlərinin üstünlüyü."
+  path="/pinupbonuslar-terms-and-conditions/"
+  pageType="TermsOfService"
+  image="/assets/banner-share.jpg"
+  breadcrumb={[
+    { name: "Əsas", href: "/" },
+    { name: "İstifadə şərtləri", href: "/pinupbonuslar-terms-and-conditions/" }
+  ]}
+  headerCta={{
+    label: "Əsas səhifə",
+    href: "/",
+    variant: "secondary"
+  }}
+>
+  <section class="hero container">
+    <div>
+      <div class="meta-row">
+        <span class="meta-chip">Terms page</span>
+        <span class="meta-chip">18+ disclosure</span>
+        <span class="meta-chip warm">Yenilənib: 7 aprel 2026</span>
+      </div>
+      <h1>Pinupbonuslar istifadə şərtləri</h1>
+      <p class="lead">
+        Bu sayt məlumat xarakterlidir və rəsmi operatorun hüquqi sənədlərini əvəz etmir. Saytdan istifadə etdikdə bu sərhədi qəbul etdiyiniz hesab olunur.
+      </p>
+      <p>
+        Bonus, payment, tətbiq, login və register mövzularında göstərilən məlumatlar qərar dəstəyi rolundadır.
+        Hüquqi qüvvəyə malik son mətn həmişə operatorun öz sənədlərində yerləşir.
+      </p>
+    </div>
+    <div class="hero-aside reveal">
+      <div class="surface glow">
+        <h2>Vacib qeyd</h2>
+        <p>
+          Saytdakı rəqəmlər və şərtlər yenilənə bilər. İstifadəçi kritik qərardan əvvəl rəsmi operator mühitində son doğrulama aparmalıdır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="surface alt">
+      <h2>İstifadə qaydaları və məsuliyyət bölgüsü</h2>
+      <ul class="key-list">
+        <li>Sayt 18 yaşdan yuxarı auditoriya üçün nəzərdə tutulub.</li>
+        <li>Pinupbonuslar.com hesab açmır, payout etmir, KYC sənədi toplamır və operator support-u əvəz etmir.</li>
+        <li>İstifadəçi bonus, limit, uyğunluq və regional əlçatanlıq şərtlərini son olaraq rəsmi platformada yoxlamalıdır.</li>
+        <li>Bu saytdakı mətn hüquqi, maliyyə və ya tibbi məsləhət kimi təqdim edilmir.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="cards">
+      <div class="card">
+        <h3>Affiliate keçidlər</h3>
+        <p>
+          Bəzi linklər komissiya modeli ilə işləyə bilər. Bu, disclosure kimi açıq göstərilir və istifadəçi üçün gizli tutulmur.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Rəsmi xidmətlər</h3>
+        <p>
+          Operatorun login, bonus, payment və compliance prosesləri bu saytın idarəsində deyil. Mübahisəli hallarda üstünlük operator sənədlərinə verilir.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Məzmun yenilənməsi</h3>
+        <p>
+          Fakt xətası və ya köhnəlmiş məlumat aşkarlanarsa, səhifə növbəti yenilənmə dövründə düzəldilir. İstifadəçi bunu URL və istinad ilə bildirməlidir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="split-grid">
+      <div class="surface glow">
+        <h2>Nəyi vəd etmirik?</h2>
+        <ul class="key-list">
+          <li>Qazanc zəmanəti vermirik.</li>
+          <li>Withdrawal müddəti və bonus nəticəsi barədə operator adından söz vermirik.</li>
+          <li>Regional əlçatanlıqla bağlı son qərarı özümüz çıxarmırıq.</li>
+          <li>İstifadəçinin maliyyə qərarına görə məsuliyyət daşımırıq.</li>
+        </ul>
+      </div>
+      <div class="surface alt">
+        <h2>Niyə bu sərhəd vacibdir?</h2>
+        <p>
+          Yaxşı affiliate sayt yalnız conversion yaratmır, həm də öz rolunu düzgün təsvir edir. Məhz bu sərhəd trust siqnalını qoruyur.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="callout">
+      <div>
+        <h3>Şərtlərlə real əməliyyatı qarışdırmayın</h3>
+        <p>
+          Bu səhifə hüquqi çərçivəni izah edir, amma son əməliyyat qaydası üçün rəsmi operator sənədləri üstün qalır.
+        </p>
+      </div>
+      <div class="cta-group">
+        <a class="btn" href="/pinupbonuslar-contact-support/">
+          Düzəliş göndər
+        </a>
+        <a class="btn secondary" href="/pinupbonuslar-privacy-policy/">
+          Privacy siyasəti
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <LinkCluster
+    title="Trust sənədləri"
+    description="Terms səhifəsini support, privacy və məsuliyyətli oyun bölmələri ilə birlikdə oxumaq daha düzgündür."
+    links={trustCards.filter((item) => item.href !== "/pinupbonuslar-terms-and-conditions/")}
+  />
+</BaseLayout>

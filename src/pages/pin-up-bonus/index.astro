@@ -1,0 +1,253 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FaqList from "../../components/FaqList.astro";
+import LinkCluster from "../../components/LinkCluster.astro";
+import PromoImage from "../../components/PromoImage.astro";
+import { site } from "../../data/site";
+
+const faq = [
+  {
+    question: "Pin Up welcome bonus nədən ibarətdir?",
+    answer:
+      "Əsas paket 10.000 AZN-ə qədər bonus və 250 free spin ilə təqdim olunur, lakin konkret eligibility və wager tələbi operator mühitində təsdiqlənməlidir."
+  },
+  {
+    question: "Promo kod mütləqdirmi?",
+    answer:
+      "Bəzi kampaniyalar avtomatik aktiv ola bilər, bəziləri promo kod tələb edə bilər. Aktiv təklif hansısa landing-də deyil, rəsmi bonus bölməsində yoxlanmalıdır."
+  },
+  {
+    question: "Bonus almaq üçün ilk depozit vacibdirmi?",
+    answer:
+      "Adətən bəli. Welcome paket adətən ilk depozit trigger-i ilə işləyir."
+  },
+  {
+    question: "Wager səbəbilə withdrawal gecikə bilər?",
+    answer:
+      "Bəli, bonus şərti tamamlanmayıbsa və ya bonus aktivdirsə, payout məhdudiyyəti yarana bilər. Ona görə payment səhifəsini də birlikdə oxumaq lazımdır."
+  }
+];
+
+const related = [
+  {
+    title: "Pin Up qeydiyyat",
+    href: "/pin-up-qeydiyyat/",
+    description: "Bonusu almaq üçün əvvəl doğru qeydiyyat və valyuta seçimi lazımdır."
+  },
+  {
+    title: "Pin Up ödəniş",
+    href: "/pin-up-payment/",
+    description: "İlk depozit, minimum hədd və withdrawal məhdudiyyətləri bonusla birlikdə düşünülməlidir."
+  },
+  {
+    title: "Pin Up giriş",
+    href: "/pin-up-giris/",
+    description: "Mövcud hesabınız varsa, bonus bölməsinə login-dən sonra keçəcəksiniz."
+  }
+];
+---
+
+<BaseLayout
+  title="Pin Up Bonus — 10.000 AZN + 250 FS və Promo Kampaniyalar"
+  description="Pin Up bonus bələdçisi: welcome paketi, free spin, promo kod kampaniyaları və bonusu aktivləşdirməzdən əvvəl yoxlanmalı əsas şərtlər."
+  path="/pin-up-bonus/"
+  faq={faq}
+  image={site.defaultImage}
+  breadcrumb={[
+    { name: "Əsas", href: "/" },
+    { name: "Bonus", href: "/pin-up-bonus/" }
+  ]}
+>
+  <section class="hero container">
+    <div>
+      <div class="meta-row">
+        <span class="meta-chip">Bonus intent</span>
+        <span class="meta-chip">Welcome + promo</span>
+        <span class="meta-chip warm">Yenilənib: 7 aprel 2026</span>
+      </div>
+      <h1>Pin Up bonus: welcome paketi, free spin və şərtləri düzgün oxumaq</h1>
+      <p class="lead">
+        Ən çox klik gətirən hissə bonus olur, amma ən çox narazılıq yaradan da odur. Buna görə bu səhifə
+        yalnız məbləği deyil, bonusu qəbul etməzdən əvvəl nələri yoxlamaq lazım olduğunu da açıq şəkildə göstərir.
+      </p>
+      <p>
+        10.000 AZN + 250 FS paketi diqqət çəkir, lakin wager, müddət, uyğun oyunlar və promo kampaniyalarının
+        aktiv statusu rəsmi operator bölməsində dəyişə bilər. Bonus səhifəsinin işi məhz bu dəyişkənliyi gizlətməməkdir.
+      </p>
+      <div class="cta-group">
+        <a class="btn" href={site.affiliateUrl} rel="sponsored nofollow">
+          Welcome bonus al
+        </a>
+        <a class="btn secondary" href="/pin-up-qeydiyyat/">
+          Əvvəl hesab aç
+        </a>
+      </div>
+    </div>
+    <div class="hero-aside reveal">
+      <div class="media-frame">
+        <PromoImage variant="hero" alt="Pin Up bonus səhifəsi üçün hero banner" loading="eager" fetchpriority="high" />
+      </div>
+      <div class="surface alt">
+        <h2>Bonusu qəbul etməzdən əvvəl</h2>
+        <ul class="pill-list">
+          <li>İlk depozit limiti</li>
+          <li>Wager tələbi</li>
+          <li>Free spin hansı slotlarda keçərlidir</li>
+          <li>Withdrawal qaydasına təsiri</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="answer-card">
+      <h2>Qısa cavab</h2>
+      <p>
+        <strong>
+          Pin Up welcome bonusu yüksək headline verir, amma real dəyəri yalnız depozit trigger-i, wager və payout məhdudiyyətləri ilə birlikdə dəyərləndirilə bilər.
+        </strong>
+      </p>
+      <p>
+        Bu səbəbdən bonus content-i tək CTA yox, qərar support materialı kimi işləməlidir. İstifadəçi nəyi qəbul etdiyini başa düşməlidir.
+      </p>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="stats">
+      <div class="stat">
+        <strong>10.000 AZN</strong>
+        <span>İlk depozitə bağlı maksimum bonus headline-i</span>
+      </div>
+      <div class="stat">
+        <strong>250 FS</strong>
+        <span>Seçilmiş slotlarda istifadə olunan free spin hissəsi</span>
+      </div>
+      <div class="stat">
+        <strong>Min. 9 AZN</strong>
+        <span>Başlanğıc depozit həddinin aşağı qalması conversion-u asanlaşdırır</span>
+      </div>
+      <div class="stat">
+        <strong>Dəyişkən şərtlər</strong>
+        <span>Promo detail-lər kampaniyaya görə dəyişə bilər və yenidən yoxlanmalıdır</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="section-header">
+      <h2>Bonusu aktivləşdirmə ardıcıllığı</h2>
+      <p class="lead">Ən sadə conversion yolu dörd addımdır, amma hər addımın öz şərt yoxlaması var.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-step">1</span>
+        <h3>Hesab yaradın və ya daxil olun</h3>
+        <p>
+          Bonus intent adətən qeydiyyatla başlayır. Mövcud hesabınız varsa, aktiv kampaniyanın eligibility-sini profil daxilində yoxlayın.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">2</span>
+        <h3>Minimum depozit şərtini oxuyun</h3>
+        <p>
+          Hər “100% bonus” headline-i eyni deyil. Minimum məbləğ, uyğun valyuta və iştirak edən payment üsulları dəyişə bilər.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">3</span>
+        <h3>Free spin və oyun siyahısını yoxlayın</h3>
+        <p>
+          Spin-lər adətən hər slotda keçərli olmur. Seçilmiş oyunlar və aktivlik müddəti operator bonus səhifəsində aydın görünməlidir.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-step">4</span>
+        <h3>Withdrawal təsirini əvvəlcədən bilin</h3>
+        <p>
+          Bonus turnover tamamlanmadan payout sorğusu gözlənildiyi kimi işləməyə bilər. Bu səbəbdən bonus və payment məzmunu ayrılmaz cütdür.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="table-wrap">
+      <table aria-label="Pin Up bonus növləri">
+        <thead>
+          <tr>
+            <th>Bonus tipi</th>
+            <th>Nə verir</th>
+            <th>Nəyi yoxlamaq lazımdır</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Welcome bonus</td>
+            <td>İlk depozitə faiz + free spin paketi</td>
+            <td>Minimum depozit, wager, uyğun oyunlar</td>
+          </tr>
+          <tr>
+            <td>Promo kod kampaniyası</td>
+            <td>Xüsusi kodla əlavə dəyər</td>
+            <td>Kodun aktiv olub-olmaması və expiry</td>
+          </tr>
+          <tr>
+            <td>Cashback</td>
+            <td>İtkidən müəyyən faiz geri dönüş</td>
+            <td>Period, max limit və eligibility</td>
+          </tr>
+          <tr>
+            <td>Turnir və seasonal promo</td>
+            <td>Əlavə reward və leaderboard bonusları</td>
+            <td>Tarix, iştirak oyunu və qayda dəsti</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">
+      Bonus detalları dəyişkən olduğu üçün bu cədvəl istiqamət verir, son hüquqi mətn deyil.
+    </p>
+  </section>
+
+  <section class="section container reveal">
+    <div class="split-grid">
+      <div class="surface glow">
+        <h2>Bonus qəbul etməzdən əvvəl düşünün</h2>
+        <ul class="key-list">
+          <li>Wager tələbi sizin oyun tempinizə uyğundurmu?</li>
+          <li>Bonus aktiv olduqda withdrawal planınız dəyişəcəkmi?</li>
+          <li>Free spin-lər oynamaq istədiyiniz oyunlarda keçərlidirmi?</li>
+          <li>Promo kod varsa, doğru sahəyə və vaxtında daxil edilibmi?</li>
+        </ul>
+      </div>
+      <div class="surface alt">
+        <h2>Affiliate content üçün əsas prinsip</h2>
+        <p>
+          Bonus səhifəsi yalnız yüksək headline yazmaq üçün deyil. İstifadəçi üçün “bunu qəbul etsəm sonra nə baş verəcək?” sualına cavab verilməlidir.
+        </p>
+        <p>
+          Bu, həm conversion keyfiyyətini artırır, həm də thin affiliate və trust problemi riskini azaldır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container reveal">
+    <div class="media-frame">
+      <PromoImage variant="square" alt="Pin Up bonus üçün promo image" />
+    </div>
+  </section>
+
+  <FaqList
+    title="Pin Up bonus haqqında tez-tez verilən suallar"
+    description="Welcome paket, promo kod və withdrawal əlaqəsi üzrə qısa cavablar."
+    items={faq}
+  />
+
+  <LinkCluster
+    title="Bonusla birlikdə oxunmalı səhifələr"
+    description="Bu intent ən çox qeydiyyat, payment və login səhifələri ilə birlikdə işləyir."
+    links={related}
+  />
+</BaseLayout>
