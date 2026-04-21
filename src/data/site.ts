@@ -7,10 +7,11 @@ export const site = {
   lang: "az",
   locale: "az_AZ",
   affiliateUrl: "https://onlinepnplnk.com/lHgcD4Xg/?subId2=az_brand",
+  visitPath: "/visit/",
   analyticsKey: "VuVQenak0KT6/BcHXSntwA",
   defaultImage: "/assets/banner-share.jpg",
   heroImage: "/assets/banner-hero.webp",
-  modifiedDate: "2026-04-07",
+  modifiedDate: "2026-04-21",
   organizationDescription:
     "Pin Up ilə bağlı bonus, giriş, qeydiyyat, yükləmə və ödəniş mövzularını izah edən Azərbaycan dilli məlumat layihəsi."
 };

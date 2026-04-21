@@ -1,0 +1,78 @@
+---
+import { site } from "../../data/site";
+
+const target = site.affiliateUrl;
+---
+
+<!doctype html>
+<html lang={site.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Visit</title>
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <link rel="canonical" href={`${site.url}${site.visitPath}`} />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0d0b12;
+        --ink: #f8f3ee;
+        --muted: #bcb4aa;
+        --accent: #ff5a2a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle at top, rgba(255, 90, 42, 0.16), transparent 32%), var(--bg);
+        color: var(--ink);
+        font: 16px/1.6 "Trebuchet MS", "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+
+      main {
+        width: min(560px, 100%);
+        padding: 28px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(20, 18, 26, 0.92);
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 28px;
+      }
+
+      p {
+        margin: 0 0 14px;
+        color: var(--muted);
+      }
+
+      a {
+        color: var(--accent);
+      }
+    </style>
+    <script is:inline define:vars={{ target }}>
+      window.location.replace(target);
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>Yönləndirilirsiniz</h1>
+      <p>Bir neçə saniyə ərzində rəsmi tərəfdaş keçidinə keçəcəksiniz.</p>
+      <p>
+        Əgər keçid avtomatik baş vermirsə,
+        <a href={target} rel="sponsored nofollow">buraya klikləyin</a>.
+      </p>
+    </main>
+  </body>
+</html>
